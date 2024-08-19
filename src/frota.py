@@ -46,7 +46,7 @@ class Carro:
     def __str__(self):
         info = (f'Carro {self.modelo}, marca {self.marca}, '
                 f'cor {self.cor}\n{self.odometro} Km, '
-                f'motor {self.motor_on}')
+                f'motor {self.motor_on}'
                 f'consumo {self.consumo_medio} km/L'
                 f'nivel do tanque {self.tanque} L')
         return info
