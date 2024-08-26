@@ -50,10 +50,10 @@ class Candidato(Pessoa):
     def __str__(self):
        info = super().__str__()
        info += f':Número {self.__numero}\n'
-          return info
+       return info
 
     def __repr__(self):
          return f'Candidato({super().__repr__()}, numero= {self.__numero})'
 
     def get_numero(self):
-        return self.__numero
+         return self.__numero
