@@ -44,14 +44,16 @@ class Eleitor(Pessoa):
 class Candidato(Pessoa):
     __numero:int
 
-  def __init__(self, numero : int):
-    self.__numero = numero
+    def __init__(self, numero : int):
+        self.__numero = numero
 
-  def __str__(self):
-     info = f':Número {self.__numero}\n'
-       return info
+    def __str__(self):
+       info = super().__str__()
+       info += f':Número {self.__numero}\n'
+          return info
 
-  def __repr__(self):
-       return
-  def get_numero(self):
-      return self.__numero
+    def __repr__(self):
+         return f'Candidato({super().__repr__()}, numero= {self.__numero})'
+
+    def get_numero(self):
+        return self.__numero
