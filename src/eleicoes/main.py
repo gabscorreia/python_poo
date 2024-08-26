@@ -55,6 +55,7 @@ def atualizar_eleitor(eleitores):
     else:
         raise Exception('Titulo inexistente')
 
+
 def menu_candidato():
     print("1-Novo Candidato")
     print("2-Atualizar Candidato")
@@ -63,14 +64,16 @@ def menu_candidato():
     while op not in (1, 2, 3):
         op = int(input("Digite a opcao [1,2,3]? "))
     return op
+
+
 def inserir_candidato(candidatos):
         numero = int(input("Digite o Número do candidato: "))
 
      if numero in candidatos:
             raise Exception("numero não existe !")
-        nome = input("Digite o nome: ")
-        RG = input("Digite o RG: ")
-        CPF = input("Digite o CPF: ")
+      nome = input("Digite o nome: ")
+      RG = input("Digite o RG: ")
+      CPF = input("Digite o CPF: ")
      candidato= Candidato(nome, RG, CPF, numero)
      candidatos[numero.get_numero()] = candidato
 
